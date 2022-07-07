@@ -1,0 +1,16 @@
+$Games
+{
+	"DEFERRED"
+	"TEMPLATE"
+	"PORTAL"
+	"PORTAL_TEMPLATE"
+	"HL2"
+	"HL2_TEMPLATE"
+	"HL2_EPISODIC"
+	"VECTRONIC"
+	"FSTOP"
+}
+
+$Conditional	"SOURCESDK" "1"
+$Include		"vpc_scripts\projects.vgc"
+$Include		"vpc_scripts\groups.vgc"

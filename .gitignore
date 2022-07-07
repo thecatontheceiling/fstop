@@ -1,52 +1,54 @@
-# Prerequisites
-*.d
+# Files to ignore when considering what GIT should commit.
 
-# Object files
-*.o
-*.ko
+# Visual Studio
+source-shader-editor
+*.suo
+*.user
+*.sln.docstates
 *.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
 *.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
+*.tlog
+*.log
+*.scc
+*.exp
+*.ilk
+*.lastbuildstate
+vc100.pdb
+ipch
+*.sdf
+*.opensdf
 *.idb
+*.vcxproj
+*.vcxproj.filters
+*.sln
+*.vpc_crc
+*.vpc.sentinel
+*.VC
+*.VC.VC.opendb
+*.VC.db
 *.pdb
+*.mdmp
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# shader files
+*.tmp
+
+hammer.vdf
+GameConfig.txt
+
+game/hl2
+game/portal
+
+src/game/client/Release*
+src/game/client/Debug*
+src/game/server/Debug*
+src/game/server/Release*
+
+
+src/.vs/Game_Deferred-2013/v15/Browse.VC.opendb
+src/materialsystem/deferredshaders/Release_dx9_deferred/game_shader_generic_deferred.lib
+src/materialsystem/deferredshaders/Release_dx9_deferred/game_shader_generic_deferred.dll
+src/materialsystem/deferredshaders/Debug_dx9_deferred/game_shader_generic_deferred.lib
+src/.vs/Game_Deferred-2013/v15/Solution.VC.db-wal
+src/.vs/Game_Deferred-2013/v15/Solution.VC.db-shm
+src/.vs
+/game

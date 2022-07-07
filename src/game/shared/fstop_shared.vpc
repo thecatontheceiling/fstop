@@ -1,0 +1,64 @@
+$Macro SHARED "$SRCDIR\game\shared"
+
+$Configuration
+{
+	$Compiler
+	{
+		$AdditionalIncludeDirectories "$BASE;$SHARED\fstop;$SHARED\template"
+	}
+}
+
+$Project
+{
+	$Folder "Source Files"
+	{
+		$Folder "F-Stop"
+		{
+			$Folder "Shared"
+			{
+				$File	"$SHARED\fstop\fstop_common.cpp"
+				$File	"$SHARED\fstop\fstop_common.h"
+				$File	"$SHARED\fstop\fstop_shareddefs.h"
+				$File	"$SHARED\fstop\func_photographable_shared.cpp"
+				$File	"$SHARED\fstop\func_photographable_shared.h"
+
+				$Folder "Weapons"
+				{
+					$File	"$SHARED\fstop\weapon_camera_shared.cpp"
+					$File	"$SHARED\fstop\weapon_camera_shared.h"
+					$File	"$SHARED\fstop\weapon_placement_shared.cpp"
+					$File	"$SHARED\fstop\weapon_placement_shared.h"
+				}
+				
+				$File	"$SHARED\fstop\fstop_gamerules.h"
+				$File	"$SHARED\fstop\fstop_gamerules.cpp"
+			}
+		}
+		
+		//$Folder "Template"
+		//{
+			//$Folder "Shared"
+			//{
+				// $File	"$SHARED\template\my_shareddefs.h"
+				// $File	"$SHARED\template\sdk_gamemovement.cpp"
+				// $File	"$SHARED\template\sdk_gamerules_sp.h"
+				// $File	"$SHARED\template\sdk_gamerules_sp.cpp"
+				// $File	"$SHARED\template\sdk_player_shared.h"
+				// $File	"$SHARED\template\sdk_shareddefs.h"
+				// $File	"$SHARED\template\sdk_usermessages.cpp"
+				// $File	"$SHARED\template\sdk_weapon_parse.h"
+				// $File	"$SHARED\template\sdk_weapon_parse.cpp"
+				
+				// $Folder "Weapons"
+				// {
+					// $File	"$SHARED\template\weapons\basesdkcombatweapon_shared.cpp"
+				// }
+			//}
+		//}
+	}
+	
+	$Folder "Link Libraries"
+	{
+		
+	}
+}

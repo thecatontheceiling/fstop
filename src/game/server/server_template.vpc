@@ -1,0 +1,53 @@
+//-----------------------------------------------------------------------------
+//	SERVER_TEMPLATE.VPC
+//
+//	Project Script
+//-----------------------------------------------------------------------------
+
+$Macro SRCDIR		"..\.."
+$Macro GAMENAME 	"template"
+
+$Include "$SRCDIR\game\server\server_base.vpc"
+
+$Configuration
+{
+	$Compiler
+	{
+		$AdditionalIncludeDirectories	"$BASE;.\hl2;$SRCDIR\game\shared\hl2;.\template;.\multiplayer;$SRCDIR\game\shared\multiplayer;$SRCDIR\game\shared\template"
+		$PreprocessorDefinitions		"$BASE;SWARM_DLL;TEMPLATE_DLL"
+	}
+}
+
+$Project "Server (Template)"
+{
+	$Folder	"Source Files"
+	{
+		$Folder "Template"
+		{
+			$File	"$SRCDIR\game\shared\template\my_shareddefs.h"
+			$File	"$SRCDIR\game\shared\template\sdk_gamemovement.cpp"
+			$File	"$SRCDIR\game\shared\template\sdk_gamerules_sp.h"
+			$File	"$SRCDIR\game\shared\template\sdk_gamerules_sp.cpp"
+			$File	"$SRCDIR\game\shared\template\sdk_player_shared.h"
+			$File	"$SRCDIR\game\shared\template\sdk_shareddefs.h"
+			$File	"$SRCDIR\game\shared\template\sdk_usermessages.cpp"
+			$File	"$SRCDIR\game\shared\template\sdk_weapon_parse.h"
+			$File	"$SRCDIR\game\shared\template\sdk_weapon_parse.cpp"
+			
+			$File	"template\player_pickup_controller.cpp"
+			$File	"template\sdk_client.cpp"
+			$File	"template\sdk_eventlog.cpp"
+			$File	"template\sdk_player.h"
+			$File	"template\sdk_player.cpp"
+			$File	"template\sdk_playermove.cpp"
+			$File	"template\test_entity.cpp"
+			$File	"template\weapon_cubemap.cpp"
+
+			$Folder	"Weapons"
+			{
+				$File	"template\weapons\basesdkcombatweapon.cpp"
+				$File	"$SRCDIR\game\shared\template\weapons\basesdkcombatweapon_shared.cpp"
+			}
+		}
+	}
+}

@@ -1,0 +1,146 @@
+//-----------------------------------------------------------------------------
+//	CLIENT_FSTOP.VPC
+//
+//	Project Script
+//-----------------------------------------------------------------------------
+
+$Macro SRCDIR		"..\.."
+$Macro GAMENAME 	"fstop"
+
+$Include "$SRCDIR\game\client\client_portal_base.vpc"
+$Include "$SRCDIR\game\client\client_shadereditor_base.vpc"
+$Include "$SRCDIR\game\client\client_deferred_base.vpc"
+$Include "$SRCDIR\game\shared\fstop_shared.vpc"
+
+$Configuration
+{
+	$Compiler
+	{
+		$AdditionalIncludeDirectories	"$BASE;.\template;.\template\vgui;.\gameui;.\template\gameui;..\statemachine"
+		$PreprocessorDefinitions		"$BASE;SWARM_DLL;TEMPLATE_DLL;GAMEUI_EMBEDDED;GAMEUI_EXPORTS;FSTOP_DLL"
+	}
+}
+
+$Project "Client (F-Stop)"
+{
+	$Folder "Source Files"
+	{
+		$Folder "F-Stop"
+		{
+			$File	"fstop\hud_viewfinder.cpp"
+			$File	"fstop\viewrender_camera.h"
+			$File	"fstop\viewrender_camera.cpp"
+			$File	"fstop\fstop_render_targets.cpp"
+			$File	"fstop\fstop_render_targets.h"
+			$File	"fstop\mat_proxy_photo.cpp"
+			$File	"fstop\mat_proxy_photo.h"
+		}
+		
+		$Folder "HL2 DLL"
+		{
+			$File	"hl2\c_weapon_gravitygun.cpp"
+		}
+		
+		//$Folder	"Template"
+		//{
+			// $File	"template\clientmode_sdk.h"
+			// $File	"template\clientmode_sdk.cpp"
+			// $File	"template\c_sdk_player.h"
+			// $File	"template\c_sdk_player.cpp"
+			// $File	"template\c_weapon__stubs.cpp"
+			
+			// $File	"template\hud_crosshair_template.cpp"
+			// $File	"template\hud_damageindicator.cpp"
+			// $File	"template\hud_developer.cpp"
+			// $File	"template\hud_weaponselection.cpp"
+			// $File	"template\sdk_fx.cpp"
+			// $File	"template\sdk_in_main.cpp"
+			// $File	"template\sdk_prediction.cpp"
+			// $File	"template\c_sdk_lesson.cpp"
+
+			// $Folder	Weapons
+			// {
+				// $File	"template\weapons\c_basesdkcombatweapon.cpp"
+			// }
+
+			// $Folder	"VGUI"
+			// {				
+				// $File	"template\vgui\nb_button.h"
+				// $File	"template\vgui\nb_header_footer.h"
+				// $File	"template\vgui\sdk_loading_panel.h"
+				// $File	"template\vgui\sdk_logo_panel.h"
+				// $File	"template\vgui\nb_button.cpp"
+				// $File	"template\vgui\nb_header_footer.cpp"
+				// $File	"template\vgui\sdk_loading_panel.cpp"
+				// $File	"template\vgui\sdk_logo_panel.cpp"
+				// $File	"template\vgui_rootpanel_sdk.cpp"
+			// }
+		
+			// $Folder	"GameUI"
+			// {
+				// $File	"template\GameUI\basemodframe.h"
+				// $File	"template\GameUI\gamemodes.h"
+				// $File	"template\GameUI\optionsmousedialog.h"
+				// $File	"template\GameUI\UIGameData.h"
+				
+				// $File	"template\GameUI\vaddonassociation.h"
+				// $File	"template\GameUI\vaddons.h"
+				// $File	"template\GameUI\vattractscreen.h"
+				// $File	"template\GameUI\vaudio.h"
+				// $File	"template\GameUI\vaudiovideo.h"
+				// $File	"template\GameUI\vcustomcampaigns.h"
+				// $File	"template\GameUI\vdropdownmenu.h"
+				// $File	"template\GameUI\vflyoutmenu.h"
+				// $File	"template\GameUI\vfooterpanel.h"
+				// $File	"template\GameUI\vgenericconfirmation.h"
+				// $File	"template\GameUI\vgenericpanellist.h"
+				// $File	"template\GameUI\vgetlegacydata.h"
+				// $File	"template\GameUI\vhybridbutton.h"
+				// $File	"template\GameUI\vingamemainmenu.h"
+				// $File	"template\GameUI\vkeyboard.h"
+				// $File	"template\GameUI\vkeyboardmouse.h"
+				// $File	"template\GameUI\vloadingprogress.h"
+				// $File	"template\GameUI\vmainmenu.h"
+				// $File	"template\GameUI\vmouse.h"
+				// $File	"template\GameUI\vslidercontrol.h"
+				// $File	"template\GameUI\vtransitionscreen.h"
+				// $File	"template\GameUI\vvideo.h"
+				
+				// $File	"template\GameUI\basemodframe.cpp"
+				// $File	"template\GameUI\BaseModPanel.cpp"
+				// $File	"template\GameUI\gamemodes.cpp"
+				// $File	"template\GameUI\optionsmousedialog.cpp"
+				// $File	"template\GameUI\vaddonassociation.cpp"
+				// $File	"template\GameUI\vaddons.cpp"
+				// $File	"template\GameUI\vattractscreen.cpp"
+				// $File	"template\GameUI\vaudio.cpp"
+				// $File	"template\GameUI\vaudiovideo.cpp"
+				// $File	"template\GameUI\vcustomcampaigns.cpp"
+				// $File	"template\GameUI\vdropdownmenu.cpp"
+				// $File	"template\GameUI\vflyoutmenu.cpp"
+				// $File	"template\GameUI\vfooterpanel.cpp"
+				// $File	"template\GameUI\vgenericconfirmation.cpp"
+				// $File	"template\GameUI\vgenericpanellist.cpp"
+				// $File	"template\GameUI\vgetlegacydata.cpp"
+				// $File	"template\GameUI\vhybridbutton.cpp"
+				// $File	"template\GameUI\vingamemainmenu.cpp"
+				// $File	"template\GameUI\vkeyboard.cpp"
+				// $File	"template\GameUI\vkeyboardmouse.cpp"
+				// $File	"template\GameUI\vloadingprogress.cpp"
+				// $File	"template\GameUI\vmainmenu.cpp"
+				// $File	"template\GameUI\vmenubackground.cpp"
+				// $File	"template\GameUI\vmouse.cpp"
+				// $File	"template\GameUI\vslidercontrol.cpp"
+				// $File	"template\GameUI\vtransitionscreen.cpp"
+				// $File	"template\GameUI\vvideo.cpp"
+				// $File	"template\GameUI\UIGameData.cpp"
+			// }
+		//}
+	}
+
+	$Folder	"Link Libraries"
+	{
+		$Lib "$LIBCOMMON\jpeglib"
+		$Lib "$LIBPUBLIC\vpklib"
+	}
+}

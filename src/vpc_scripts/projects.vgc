@@ -1,0 +1,43 @@
+$Project "client"
+{
+	"game\client\client_deferred.vpc"	[$DEFERRED]
+	"game\client\client_template.vpc"	[$TEMPLATE]
+	"game\client\client_portal.vpc"		[$PORTAL]
+	"game\client\client_portal_template.vpc"		[$PORTAL_TEMPLATE]
+	"game\client\client_hl2.vpc"		[$HL2]
+	"game\client\client_hl2_template.vpc"		[$HL2_TEMPLATE]
+	"game\client\client_episodic.vpc"		[$HL2_EPISODIC]
+	"game\client\client_vectronic.vpc"		[$VECTRONIC]
+	"game\client\client_fstop.vpc"		[$FSTOP]
+}
+
+$Project "server"
+{
+	"game\server\server_deferred.vpc"	[$DEFERRED]
+	"game\server\server_template.vpc"	[$TEMPLATE]
+	"game\server\server_portal_template.vpc"		[$PORTAL_TEMPLATE]
+	"game\server\server_portal.vpc"		[$PORTAL]
+	"game\server\server_hl2.vpc"		[$HL2]
+	"game\server\server_hl2_template.vpc"		[$HL2_TEMPLATE]
+	"game\server\server_episodic.vpc"		[$HL2_EPISODIC]
+	"game\server\server_vectronic.vpc"		[$VECTRONIC]
+	"game\server\server_fstop.vpc"		[$FSTOP]
+}
+
+
+$Project "missionchooser"
+{
+}
+
+
+$Project "shaderlib"
+{
+	"materialsystem\shaderlib\shaderlib.vpc"
+}
+
+$Project "game_shader"
+{
+	"materialsystem\stdshaders\game_shader_dx9_portal.vpc"	[$PORTAL]
+	"materialsystem\deferredshaders\game_shader_generic_deferred.vpc"	[$DEFERRED]
+	"materialsystem\deferredshaders\game_shader_generic_deferred.vpc"	[$FSTOP]
+}

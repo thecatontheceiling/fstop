@@ -1,0 +1,74 @@
+//-----------------------------------------------------------------------------
+//	SERVER_TEMPLATE.VPC
+//
+//	Project Script
+//-----------------------------------------------------------------------------
+
+$Macro SRCDIR		"..\.."
+$Macro GAMENAME 	"vectronic"
+
+$Include "$SRCDIR\game\server\server_base.vpc"
+
+$Configuration
+{
+	$Compiler
+	{
+		$AdditionalIncludeDirectories	"$BASE;.\hl2;$SRCDIR\game\shared\hl2;.\vectronic;.\multiplayer;$SRCDIR\game\shared\multiplayer;$SRCDIR\game\shared\vectronic"
+		$PreprocessorDefinitions		"$BASE;SWARM_DLL"
+	}
+}
+
+$Project "Server (Vectronic)"
+{
+	$Folder	"Source Files"
+	{
+		$Folder "Vectronic"
+		{
+			$Folder "Shared"
+			{
+				$Folder	Weapons
+				{
+					$File	"$SRCDIR\game\shared\vectronic\basevectroniccombatweapon_shared.cpp"
+					$File	"$SRCDIR\game\shared\vectronic\basevectroniccombatweapon_shared.h"
+				}
+
+				$File	"$SRCDIR\game\shared\vectronic\vectronic_gamemovement.cpp"
+				$File	"$SRCDIR\game\shared\vectronic\vectronic_gamerules.h"
+				$File	"$SRCDIR\game\shared\vectronic\vectronic_gamerules.cpp"
+				$File	"$SRCDIR\game\shared\vectronic\vectronic_shareddefs.h"
+				$File	"$SRCDIR\game\shared\vectronic\my_shareddefs.h"
+				$File	"$SRCDIR\game\shared\vectronic\vectronic_usermessages.cpp"
+				$File	"$SRCDIR\game\shared\vectronic\vectronic_weapon_parse.h"
+				$File	"$SRCDIR\game\shared\vectronic\vectronic_weapon_parse.cpp"
+			}
+			
+			$File	"vectronic\func_laser_receiver.cpp"
+			$File	"vectronic\func_solidity.cpp"
+			$File	"vectronic\player_pickup_controller.cpp"
+			$File	"vectronic\player_pickup_controller.h"
+			$File	"vectronic\point_vectronic_suck.cpp"
+			$File	"vectronic\point_vectronic_suck.h"
+			$File	"vectronic\prop_button.cpp"
+			$File	"vectronic\prop_indicator_panel.cpp"
+			$File	"vectronic\prop_vecball_dispenser.cpp"
+			$File	"vectronic\prop_vecball_dispenser.h"
+			$File	"vectronic\prop_vecball_launcher.cpp"
+			$File	"vectronic\prop_vecbox.cpp"
+			$File	"vectronic\prop_vecbox.h"
+			$File	"vectronic\prop_vectronic_projectile.cpp"
+			$File	"vectronic\prop_vectronic_projectile.h"
+			$File	"vectronic\test_particle_color.cpp"
+			$File	"vectronic\vectronic_client.cpp"
+			$File	"vectronic\vectronic_eventlog.cpp"
+			$File	"vectronic\vectronic_player.cpp"
+			$File	"vectronic\vectronic_player.h"
+			$File	"vectronic\vectronic_playermove.cpp"
+			$File	"vectronic\vectronic_triggers.cpp"
+			$File	"vectronic\vectronic_vecall_system.cpp"
+			$File	"vectronic\vectronic_vecall_system.h"
+			$File	"vectronic\weapon_cubemap.cpp"
+			$File	"vectronic\weapon_vecgun.cpp"
+			$File	"vectronic\weapon_vecgun.h"
+		}
+	}
+}

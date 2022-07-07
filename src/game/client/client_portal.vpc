@@ -1,0 +1,10 @@
+//-----------------------------------------------------------------------------
+//	CLIENT_PORTAL.VPC
+//
+//	Project Script
+//-----------------------------------------------------------------------------
+
+$Macro SRCDIR		"..\.."
+$Macro GAMENAME 	"portal"
+
+$Include "$SRCDIR\game\client\client_portal_base.vpc"

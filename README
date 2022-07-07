@@ -1,0 +1,24 @@
+Features
+-----------------------
+
+- Source Shader Editor integration
+- Support for VS 2010-13
+- HL2, Portal, Deferred project templates
+- Fixed Hammer Editor
+- Updated engine binaries
+
+Requirements
+-----------------------
+
+-MFC Multibyte library for Visual Studio
+
+Contributors
+-----------------------
+
+- reepblue
+- Joshua Ashton
+- DankParrot
+- SCell555
+- danielmm8888
+- biohazard90
+- DasMaddi

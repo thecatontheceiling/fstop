@@ -1,0 +1,64 @@
+//-----------------------------------------------------------------------------
+//	SERVER_FSTOP.VPC
+//
+//	Project Script
+//-----------------------------------------------------------------------------
+
+$Macro SRCDIR		"..\.."
+$Macro GAMENAME 	"fstop"
+
+$Include "$SRCDIR\game\server\server_portal_base.vpc"
+$Include "$SRCDIR\game\server\server_deferred_base.vpc"
+$Include "$SRCDIR\game\shared\fstop_shared.vpc"
+
+$Configuration
+{
+	$Compiler
+	{
+		$AdditionalIncludeDirectories	"$BASE;.\template;$SRCDIR\game\shared\template;.\fstop;$SRCDIR\game\shared\fstop"
+		$PreprocessorDefinitions		"$BASE;SWARM_DLL;TEMPLATE_DLL;FSTOP_DLL"
+	}
+}
+
+$Project "Server (F-Stop)"
+{
+	$Folder	"Source Files"
+	{
+		$Folder "F-Stop"
+		{
+			$File	"fstop\afterimage.cpp"
+			$File	"fstop\afterimage.h"
+			$File	"fstop\prop_photo_shadow.cpp"
+			$File	"fstop\prop_photo_shadow.h"
+			$File	"fstop\info_placement_helper.h"
+			$File	"fstop\info_placement_helper.cpp"
+			$File	"fstop\trigger_fstop_cleanser.cpp"
+			$File	"fstop\fstop_client.cpp"
+			$File	"fstop\npc_android.cpp"
+			$File	"fstop\npc_android.h"
+			$File	"fstop\npc_chicken.cpp"
+		}
+		
+		$Folder "HL2 DLL"
+		{
+			$File	"physgun.cpp"
+		}
+
+		$Folder "Template"
+		{
+			// $File	"template\player_pickup_controller.cpp"
+			// $File	"template\sdk_client.cpp"
+			// $File	"template\sdk_eventlog.cpp"
+			// $File	"template\sdk_player.h"
+			// $File	"template\sdk_player.cpp"
+			// $File	"template\sdk_playermove.cpp"
+			// $File	"template\test_entity.cpp"
+			// $File	"template\weapon_cubemap.cpp"
+
+			// $Folder	Weapons
+			// {
+				// $File	"template\weapons\basesdkcombatweapon.cpp"
+			// }
+		}
+	}
+}

@@ -1,0 +1,151 @@
+//-----------------------------------------------------------------------------
+//	CLIENT_TEMPLATE.VPC
+//
+//	Project Script
+//-----------------------------------------------------------------------------
+
+$Macro SRCDIR		"..\.."
+$Macro GAMENAME 	"vectronic"
+
+$Include "$SRCDIR\game\client\client_base.vpc"
+
+$Configuration
+{
+	$Compiler
+	{
+		$AdditionalIncludeDirectories	"$BASE;.\hl2;.\vectronic;.\vectronic\vgui;.\gameui;$SRCDIR\game\client\vectronic\gameui;..\statemachine;$SRCDIR\game\shared\multiplayer;.\multiplayer;$SRCDIR\game\shared\vectronic"
+		$PreprocessorDefinitions		"$BASE;SWARM_DLL;TEMPLATE_DLL;GAMEUI_EMBEDDED;GAMEUI_EXPORTS"
+	}
+}
+
+$Project "Client (Vectronic)"
+{
+	$Folder "Source Files"
+	{
+		$Folder	"Vectronic"
+		{
+			$Folder "Shared"
+			{
+				$Folder	Weapons
+				{
+					$File	"$SRCDIR\game\shared\vectronic\basevectroniccombatweapon_shared.cpp"
+					$File	"$SRCDIR\game\shared\vectronic\basevectroniccombatweapon_shared.h"
+				}
+
+				$File	"$SRCDIR\game\shared\vectronic\vectronic_gamemovement.cpp"
+				$File	"$SRCDIR\game\shared\vectronic\vectronic_gamerules.h"
+				$File	"$SRCDIR\game\shared\vectronic\vectronic_gamerules.cpp"
+				$File	"$SRCDIR\game\shared\vectronic\vectronic_shareddefs.h"
+				$File	"$SRCDIR\game\shared\vectronic\my_shareddefs.h"
+				$File	"$SRCDIR\game\shared\vectronic\vectronic_usermessages.cpp"
+				$File	"$SRCDIR\game\shared\vectronic\vectronic_weapon_parse.h"
+				$File	"$SRCDIR\game\shared\vectronic\vectronic_weapon_parse.cpp"
+			}
+
+			$File	"vectronic\noshare\clientmode_vectronic.h"
+			$File	"vectronic\noshare\clientmode_vectronic.cpp"
+			$File	"vectronic\c_weapon__stubs_vectronic.cpp"			
+			$File	"vectronic\vectronic_fx.cpp"
+			$File	"vectronic\vectronic_in_main.cpp"
+			$File	"vectronic\vectronic_prediction.cpp"
+			$File	"vectronic\c_vectronic_lesson.cpp"
+
+			$Folder "HUD"
+			{
+				$File	"vectronic\hud_vectronic_quickinfo.cpp"
+				$File	"vectronic\hud_vectronic_quickinfo.h"
+				$File	"vectronic\hud_ball_icons.cpp"
+				$File	"vectronic\hud_damageindicator.cpp"
+				$File	"vectronic\hud_weaponselection.cpp"
+			}
+
+			$File	"vectronic\c_weapon_vecgun.cpp"
+			$File	"vectronic\c_weapon_vecgun.h"
+			$File	"vectronic\c_prop_vectronic_projectile.cpp"
+			$File	"vectronic\c_prop_vectronic_projectile.h"
+			$File	"vectronic\c_prop_vecbox.cpp"
+			$File	"vectronic\c_prop_vecbox.h"
+			$File	"vectronic\c_vectronic_player.h"
+			$File	"vectronic\c_vectronic_player.cpp"
+
+			$Folder	"VGUI"
+			{				
+				$File	"vectronic\vgui\nb_button.h"
+				$File	"vectronic\vgui\nb_header_footer.h"
+				$File	"vectronic\vgui\sdk_loading_panel.h"
+				$File	"vectronic\vgui\sdk_logo_panel.h"
+				$File	"vectronic\vgui\nb_button.cpp"
+				$File	"vectronic\vgui\nb_header_footer.cpp"
+				$File	"vectronic\vgui\sdk_loading_panel.cpp"
+				$File	"vectronic\vgui\sdk_logo_panel.cpp"
+				$File	"vectronic\vgui_rootpanel_vectronic.cpp"
+			}
+		
+			$Folder	"GameUI"
+			{
+				$File	"vectronic\GameUI\basemodframe.h"
+				$File	"vectronic\GameUI\gamemodes.h"
+				$File	"vectronic\GameUI\optionsmousedialog.h"
+				$File	"vectronic\GameUI\UIGameData.h"
+				
+				$File	"vectronic\GameUI\vaddonassociation.h"
+				$File	"vectronic\GameUI\vaddons.h"
+				$File	"vectronic\GameUI\vattractscreen.h"
+				$File	"vectronic\GameUI\vaudio.h"
+				$File	"vectronic\GameUI\vaudiovideo.h"
+				$File	"vectronic\GameUI\vcustomcampaigns.h"
+				$File	"vectronic\GameUI\vdropdownmenu.h"
+				$File	"vectronic\GameUI\vflyoutmenu.h"
+				$File	"vectronic\GameUI\vfooterpanel.h"
+				$File	"vectronic\GameUI\vgenericconfirmation.h"
+				$File	"vectronic\GameUI\vgenericpanellist.h"
+				$File	"vectronic\GameUI\vgetlegacydata.h"
+				$File	"vectronic\GameUI\vhybridbutton.h"
+				$File	"vectronic\GameUI\vingamemainmenu.h"
+				$File	"vectronic\GameUI\vkeyboard.h"
+				$File	"vectronic\GameUI\vkeyboardmouse.h"
+				$File	"vectronic\GameUI\vloadingprogress.h"
+				$File	"vectronic\GameUI\vmainmenu.h"
+				$File	"vectronic\GameUI\vmouse.h"
+				$File	"vectronic\GameUI\vslidercontrol.h"
+				$File	"vectronic\GameUI\vtransitionscreen.h"
+				$File	"vectronic\GameUI\vvideo.h"
+				
+				$File	"vectronic\GameUI\basemodframe.cpp"
+				$File	"vectronic\GameUI\BaseModPanel.cpp"
+				$File	"vectronic\GameUI\gamemodes.cpp"
+				$File	"vectronic\GameUI\optionsmousedialog.cpp"
+				$File	"vectronic\GameUI\vaddonassociation.cpp"
+				$File	"vectronic\GameUI\vaddons.cpp"
+				$File	"vectronic\GameUI\vattractscreen.cpp"
+				$File	"vectronic\GameUI\vaudio.cpp"
+				$File	"vectronic\GameUI\vaudiovideo.cpp"
+				$File	"vectronic\GameUI\vcustomcampaigns.cpp"
+				$File	"vectronic\GameUI\vdropdownmenu.cpp"
+				$File	"vectronic\GameUI\vflyoutmenu.cpp"
+				$File	"vectronic\GameUI\vfooterpanel.cpp"
+				$File	"vectronic\GameUI\vgenericconfirmation.cpp"
+				$File	"vectronic\GameUI\vgenericpanellist.cpp"
+				$File	"vectronic\GameUI\vgetlegacydata.cpp"
+				$File	"vectronic\GameUI\vhybridbutton.cpp"
+				$File	"vectronic\GameUI\vingamemainmenu.cpp"
+				$File	"vectronic\GameUI\vkeyboard.cpp"
+				$File	"vectronic\GameUI\vkeyboardmouse.cpp"
+				$File	"vectronic\GameUI\vloadingprogress.cpp"
+				$File	"vectronic\GameUI\vmainmenu.cpp"
+				$File	"vectronic\GameUI\vmenubackground.cpp"
+				$File	"vectronic\GameUI\vmouse.cpp"
+				$File	"vectronic\GameUI\vslidercontrol.cpp"
+				$File	"vectronic\GameUI\vtransitionscreen.cpp"
+				$File	"vectronic\GameUI\vvideo.cpp"
+				$File	"vectronic\GameUI\UIGameData.cpp"
+			}
+		}
+	}
+
+	$Folder	"Link Libraries"
+	{
+		$Lib "$LIBCOMMON\jpeglib"
+		$Lib "$LIBPUBLIC\vpklib"
+	}
+}
